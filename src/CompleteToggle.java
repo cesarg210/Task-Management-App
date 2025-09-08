@@ -1,0 +1,3 @@
+interface CompleteToggle {
+    void toggleComplete();
+}

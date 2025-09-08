@@ -1,32 +1,29 @@
 public class SchoolTask extends Task{
-    String CourseName;
-    Date dueDate;
-    String SubmissionStatus;
-    float progress;
+    private String courseName;
+    private Date dueDate;
+    private String SubmissionStatus;
+    private float progress;
 
-    SchoolTask(String title, String CourseName, String description, Date dueDate){
-
+    SchoolTask(String title, String courseName, String description, String category, Date dueDate){
+        super(title, description, category);
+        this.courseName = courseName;
+        this.dueDate = dueDate;
     }
     public void submit(){
 
     }
 
     @Override
-    public String getDetails(){
-
-    }
-
-    @Override
-    public void updateStatus(){
+    public void getDetails(){
 
     }
 
     public String getCourseName() {
-        return CourseName;
+        return courseName;
     }
 
     public void setCourseName(String courseName) {
-        CourseName = courseName;
+        courseName = courseName;
     }
 
     public Date getDueDate() {

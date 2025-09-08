@@ -1,11 +1,24 @@
-abstract class Task {
-    String title;
-    String description;
-    String status;
-    String category;
+abstract class Task implements CompleteToggle {
+    protected String title;
+    protected String description;
+    protected String category;
+    protected boolean isComplete = false;
 
-    abstract String getDetails();
-    abstract void updateStatus();
+
+    Task(String title, String description, String category){
+        this.title = title;
+        this.description = description;
+        this.category = category;
+    }
+
+    @Override
+    public void toggleComplete(){
+        isComplete = !isComplete;
+    }
+
+    public void getDetails(){
+        System.out.println("Title: " + this.title + " Category: " + this.category + " Status: " + getStatus());
+    }
 
     public String getTitle() {
         return title;
@@ -24,11 +37,11 @@ abstract class Task {
     }
 
     public String getStatus() {
-        return status;
-    }
 
-    public void setStatus(String status) {
-        this.status = status;
+        if(isComplete){ return "Complete"; }
+
+        else { return "Incomplete"; }
+
     }
 
     public String getCategory() {

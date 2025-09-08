@@ -1,16 +1,21 @@
 public class PersonalTask extends Task{
-    String notes;
-    boolean isRecurring;
-    String location;
-    Date reminder;
+    private String notes;
+    private boolean isRecurring;
+    private String location;
+    private Date reminder;
 
-    @Override
-    public String getDetails(){
-
+    public PersonalTask(String title, String description, String category,
+                        String notes, boolean isRecurring, String location, Date reminder) {
+        super(title, description, category);
+        this.notes = notes;
+        this.isRecurring = isRecurring;
+        this.location = location;
+        this.reminder = reminder;
     }
-    @Override
-    public void  updateStatus(){
 
+    @Override
+    public void getDetails(){
+        super.getDetails();
     }
 
     public String getNotes() {
