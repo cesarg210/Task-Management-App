@@ -2,7 +2,7 @@ abstract class Task {
     String title;
     String description;
     String status;
-    Category category;
+    String category;
 
     abstract String getDetails();
     abstract void updateStatus();
@@ -31,11 +31,11 @@ abstract class Task {
         this.status = status;
     }
 
-    public Category getCategory() {
+    public String getCategory() {
         return category;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 }
