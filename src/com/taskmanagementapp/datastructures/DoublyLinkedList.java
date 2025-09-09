@@ -46,6 +46,7 @@ public class DoublyLinkedList<T> {
             newNode.next = head;
             head = newNode;
         }
+        length++;
     }
 
 
