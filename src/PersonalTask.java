@@ -16,6 +16,9 @@ public class PersonalTask extends Task{
     @Override
     public void getDetails(){
         super.getDetails();
+        System.out.println("Location: " + this.location);
+        System.out.println("Description: " + this.description);
+        System.out.println("Notes: " + this.notes);
     }
 
     public String getNotes() {

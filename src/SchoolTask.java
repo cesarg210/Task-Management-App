@@ -1,7 +1,7 @@
 public class SchoolTask extends Task{
     private String courseName;
     private Date dueDate;
-    private String SubmissionStatus;
+    private boolean isSubmitted = false;
     private float progress;
 
     SchoolTask(String title, String courseName, String description, String category, Date dueDate){
@@ -10,12 +10,14 @@ public class SchoolTask extends Task{
         this.dueDate = dueDate;
     }
     public void submit(){
-
+        toggleComplete();
+        isSubmitted = !isSubmitted;
     }
 
     @Override
     public void getDetails(){
-
+        System.out.println("Course: " + this.courseName + " Assignment name: " + this.title + " Due Date: " + this.dueDate.getDate() + " " + getSubmitted());
+        System.out.println("Description: " + this.description);
     }
 
     public String getCourseName() {
@@ -34,13 +36,16 @@ public class SchoolTask extends Task{
         this.dueDate = dueDate;
     }
 
-    public String getSubmissionStatus() {
-        return SubmissionStatus;
+    public String getSubmitted() {
+        if(isSubmitted){
+            return "Assignment submitted!";
+        } else {
+            return "Assignment not submitted!";
+        }
+
+
     }
 
-    public void setSubmissionStatus(String submissionStatus) {
-        SubmissionStatus = submissionStatus;
-    }
 
     public float getProgress() {
         return progress;

@@ -3,10 +3,13 @@ public class Date {
     int mm;
     int dd;
 
-    public Date(int yy, int mm, int dd) {
+    public Date(int mm, int dd, int yy) {
         this.yy = yy;
         this.mm = mm;
         this.dd = dd;
+    }
+    public String getDate(){
+        return this.mm + "-" + this.dd + "-" + this.yy;
     }
 
     public int getYy() {
