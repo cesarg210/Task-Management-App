@@ -1,3 +1,5 @@
+package com.taskmanagementapp.models;
+
 public class Assignee {
     private String firstName;
     private String lastName;
@@ -9,7 +11,7 @@ public class Assignee {
         this.department = department;
     }
     public void getDetails(){
-        System.out.println("Assignee Name: " + firstName + " " + lastName + " Department: " + department);
+        System.out.println("com.taskmanagementapp.models.Assignee Name: " + firstName + " " + lastName + " Department: " + department);
     }
     public String getFirstName() {
         return firstName;

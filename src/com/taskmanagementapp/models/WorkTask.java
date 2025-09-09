@@ -1,4 +1,8 @@
-public class WorkTask extends Task implements Prioritization{
+package com.taskmanagementapp.models;
+
+import com.taskmanagementapp.interfaces.Prioritization;
+
+public class WorkTask extends Task implements Prioritization {
     private Assignee assignee;
     private int priority;
 

@@ -1,4 +1,7 @@
-public class SchoolTask extends Task{
+package com.taskmanagementapp.models;
+
+
+public class SchoolTask extends Task {
     private String courseName;
     private Date dueDate;
     private boolean isSubmitted = false;

@@ -1,4 +1,8 @@
-abstract class Task implements CompleteToggle {
+package com.taskmanagementapp.models;
+
+import com.taskmanagementapp.interfaces.CompleteToggle;
+
+public abstract class Task implements CompleteToggle {
     protected String title;
     protected String description;
     protected String category;

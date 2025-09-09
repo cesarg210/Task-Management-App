@@ -1,4 +1,8 @@
-public class PersonalTask extends Task{
+package com.taskmanagementapp.models;
+
+package com.taskmanagementapp.models;
+
+public class PersonalTask extends Task {
     private String notes;
     private boolean isRecurring;
     private String location;
