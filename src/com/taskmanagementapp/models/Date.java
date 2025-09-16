@@ -37,4 +37,13 @@ public class Date {
     public void setDd(int dd) {
         this.dd = dd;
     }
+
+    @Override
+    public String toString() {
+        return "Date{" +
+                "yy=" + yy +
+                ", mm=" + mm +
+                ", dd=" + dd +
+                '}';
+    }
 }

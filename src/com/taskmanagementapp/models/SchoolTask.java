@@ -7,7 +7,7 @@ public class SchoolTask extends Task {
     private boolean isSubmitted = false;
     private float progress;
 
-    SchoolTask(String title, String courseName, String description, String category, Date dueDate){
+    public SchoolTask(String title, String courseName, String description, String category, Date dueDate){
         super(title, description, category);
         this.courseName = courseName;
         this.dueDate = dueDate;
@@ -21,6 +21,20 @@ public class SchoolTask extends Task {
     public void getDetails(){
         System.out.println("Course: " + this.courseName + " Assignment name: " + this.title + " Due Date: " + this.dueDate.getDate() + " " + getSubmitted());
         System.out.println("Description: " + this.description);
+    }
+
+    @Override
+    public String toString() {
+        return "SchoolTask{" +
+                "courseName='" + courseName + '\'' +
+                ", dueDate=" + dueDate +
+                ", isSubmitted=" + isSubmitted +
+                ", progress=" + progress +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", category='" + category + '\'' +
+                ", isComplete=" + isComplete +
+                '}';
     }
 
     public String getCourseName() {
@@ -45,10 +59,7 @@ public class SchoolTask extends Task {
         } else {
             return "Assignment not submitted!";
         }
-
-
     }
-
 
     public float getProgress() {
         return progress;

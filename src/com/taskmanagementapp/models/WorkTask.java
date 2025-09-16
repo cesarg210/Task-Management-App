@@ -6,7 +6,7 @@ public class WorkTask extends Task implements Prioritization {
     private Assignee assignee;
     private int priority;
 
-    WorkTask(String title, Assignee assignee, String description, String category, int priority){
+    public WorkTask(String title, Assignee assignee, String description, String category, int priority){
     super(title, description, category);
     this.assignee = assignee;
     this.priority = priority;
@@ -18,6 +18,18 @@ public class WorkTask extends Task implements Prioritization {
         assignee.getDetails();
         System.out.println("Description: " + this.description);
         System.out.println("Priority: " + calculatePriority(priority));
+    }
+
+    @Override
+    public String toString() {
+        return "WorkTask{" +
+                "assignee=" + assignee +
+                ", priority=" + priority +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", category='" + category + '\'' +
+                ", isComplete=" + isComplete +
+                '}';
     }
 
     @Override

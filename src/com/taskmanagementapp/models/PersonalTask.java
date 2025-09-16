@@ -1,6 +1,5 @@
 package com.taskmanagementapp.models;
 
-package com.taskmanagementapp.models;
 
 public class PersonalTask extends Task {
     private String notes;
@@ -23,6 +22,16 @@ public class PersonalTask extends Task {
         System.out.println("Location: " + this.location);
         System.out.println("Description: " + this.description);
         System.out.println("Notes: " + this.notes);
+    }
+
+    @Override
+    public String toString() {
+        return "Title: " + title + "\n" +
+                "Category: " + category + "\n" +
+                "Description: " + description + "\n" +
+                "Location: " + location + "\n" +
+                "Reminder set to " + reminder + "\n" +
+                "Recurring: " + isRecurring;
     }
 
     public String getNotes() {

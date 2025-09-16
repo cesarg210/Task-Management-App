@@ -5,13 +5,13 @@ public class Assignee {
     private String lastName;
     private String department;
 
-    Assignee(String firstName, String lastName, String department){
+    public Assignee(String firstName, String lastName, String department){
         this.firstName = firstName;
         this.lastName = lastName;
         this.department = department;
     }
     public void getDetails(){
-        System.out.println("com.taskmanagementapp.models.Assignee Name: " + firstName + " " + lastName + " Department: " + department);
+        System.out.println("Assignee Name: " + firstName + " " + lastName + " Department: " + department);
     }
     public String getFirstName() {
         return firstName;
