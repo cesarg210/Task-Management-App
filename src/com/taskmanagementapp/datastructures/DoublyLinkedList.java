@@ -13,6 +13,7 @@ public class DoublyLinkedList<T> {
         Node(T data){
             this.data = data;
         }
+        public T getData(){ return data;}
     }
 
     public DoublyLinkedList(){
@@ -141,6 +142,5 @@ public class DoublyLinkedList<T> {
             current = current.next;
         }
     }
-
 
 }

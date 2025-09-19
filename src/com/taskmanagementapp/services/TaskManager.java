@@ -11,14 +11,13 @@ public class TaskManager {
         System.out.println("Task Added!");
     }
 
-    public Task removeTask(Task t) {
+    public void removeTask(Task t) {
         if(tasks.removeByData(t)){
             tasks.removeByData(t);
             System.out.println(t.getTitle() + " task removed!");
         } else {
             System.out.println("Task does not exist!");
         }
-        return t;
     }
 
     @Override
@@ -32,6 +31,16 @@ public class TaskManager {
         tasks.printList();
     }
 
-    // implement public Task getTask(String title)
+    // Finds task based on title property in list
+public Task getTask(String title){
+        for(int i = 0; i < tasks.size(); i++) {
 
+            Task task = tasks.get(i).getData();
+
+            if(task.getTitle().equals(title)){
+                return task;
+            }
+        }
+        return null;
+    }
 }

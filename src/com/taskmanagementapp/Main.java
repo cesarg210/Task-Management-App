@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        // Initiate TaskManager object 'task'
+        // Instantiate TaskManager object 'task'
         TaskManager task = new TaskManager();
         // Initiate user input
         Scanner keyboard = new Scanner(System.in);
@@ -28,10 +28,13 @@ public class Main {
                     switch(choice2){
                         case 1:
 
+
                             break;
                         case 2:
+
                             break;
                         case 3:
+
                             break;
                         default:
 
@@ -39,14 +42,28 @@ public class Main {
 
 
                    break;
-               case 2: // Add case for removing task
+               case 2: // Removing task case
                    System.out.print("Enter task Title to remove: ");
-                   String taskToRemove = keyboard.next();
+                   String title = keyboard.next();
+                   Task taskToRemove = task.getTask(title);
 
+                    if(taskToRemove != null){
+                        task.removeTask(taskToRemove);
+                    } else{
+                        System.out.println("Invalid title! Task does not exist!");
+                    }
 
                    break;
-               case 3: // Add search task case
+               case 3: // Search task case
+                   System.out.print("Enter task title to search: ");
+                   String titleToSearch = keyboard.next();
+                   Task taskToSearch = task.getTask(titleToSearch);
 
+                   if(taskToSearch != null){
+                       taskToSearch.getDetails();
+                   } else{
+                       System.out.println("Invalid title! Task does not exist!");
+                   }
 
                    break;
                case 4: // Add display of tasks case
@@ -54,6 +71,14 @@ public class Main {
                    break;
                default:
                    System.out.println("Invalid input");
+           }
+
+
+
+            System.out.print("Continue in main menu? 1/yes 2/no: ");
+
+           if(keyboard.nextInt() != 1){
+               running = false;
            }
 
         }while(running);
