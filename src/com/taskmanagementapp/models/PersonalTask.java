@@ -8,12 +8,16 @@ public class PersonalTask extends Task {
     private Date reminder;
 
     public PersonalTask(String title, String description, String category,
-                        String notes, boolean isRecurring, String location, Date reminder) {
+                        String notes, String location) {
         super(title, description, category);
         this.notes = notes;
-        this.isRecurring = isRecurring;
         this.location = location;
-        this.reminder = reminder;
+    }
+    PersonalTask(){
+        this.notes = "None";
+        this.isRecurring = false;
+        this.location = "None";
+        this.reminder = null;
     }
 
     @Override
@@ -26,12 +30,14 @@ public class PersonalTask extends Task {
 
     @Override
     public String toString() {
-        return "Title: " + title + "\n" +
+        return "Personal Task\n" +
+                "------------------\n" +
+                "Title: " + title + "\n" +
                 "Category: " + category + "\n" +
                 "Description: " + description + "\n" +
                 "Location: " + location + "\n" +
-                "Reminder set to " + reminder + "\n" +
-                "Recurring: " + isRecurring;
+                "Reminder: " + reminder + "\n" +
+                "Recurring: " + isRecurring + "\n";
     }
 
     public String getNotes() {

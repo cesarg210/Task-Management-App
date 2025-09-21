@@ -10,6 +10,11 @@ public class Date {
         this.mm = mm;
         this.dd = dd;
     }
+    Date(){
+        this.yy = 0;
+        this.mm = 0;
+        this.dd = 0;
+    }
     public String getDate(){
         return this.mm + "-" + this.dd + "-" + this.yy;
     }

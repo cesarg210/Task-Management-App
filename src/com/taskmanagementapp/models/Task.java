@@ -22,6 +22,11 @@ public abstract class Task implements CompleteToggle {
         this.description = description;
         this.category = category;
     }
+    Task(){
+        this.title = null;
+        this.description = "None";
+        this.category = "None";
+    }
 
     @Override
     public void toggleComplete(){

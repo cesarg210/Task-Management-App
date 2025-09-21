@@ -106,7 +106,7 @@ public class DoublyLinkedList<T> {
 
         while(current != null){
 
-            if(data.equals(current)){
+            if(data.equals(current.data)){
                 // Case 1: Only node
                 if(current == head && current == tail){
                     head = null;
